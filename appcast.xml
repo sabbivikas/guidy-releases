@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Guidy</title>
+        <!-- No published updates yet. scripts/release.sh in the guidy repo
+             regenerates this feed when a Guidy release is cut. An empty feed
+             means the updater never offers an update. -->
+    </channel>
+</rss>
