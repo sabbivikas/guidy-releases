@@ -2,8 +2,18 @@
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>Guidy</title>
-        <!-- No published updates yet. scripts/release.sh in the guidy repo
-             regenerates this feed when a Guidy release is cut. An empty feed
-             means the updater never offers an update. -->
+        <!-- No published updates yet. scripts/release.sh regenerates this feed
+             when a Guidy release is cut. An empty feed means the updater never
+             offers an update. -->
+        <item>
+            <title>1.1</title>
+            <pubDate>Sat, 21 Nov 2026 01:41:37 -0600</pubDate>
+            <link>https://github.com/sabbivikas/guidy-releases</link>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/sabbivikas/guidy-releases/main/Guidy-1.1.md</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/sabbivikas/guidy-releases/releases/download/v1.1/Guidy-1.1.dmg" length="5707736" type="application/octet-stream" sparkle:edSignature="Hf3ntxAyj3Su/SviBREjCvKo0G9qTNUqOiNUgO6LJ0K/uVe2tTp5cJGn/mLqILOd4cPtq/N6sx7+t6n41huiDQ=="/>
+        </item>
     </channel>
 </rss>
