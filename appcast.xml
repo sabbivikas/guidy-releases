@@ -3,6 +3,16 @@
     <channel>
         <title>Guidy</title>
         <item>
+            <title>0.1.3</title>
+            <pubDate>Sun, 22 Nov 2026 15:37:25 -0600</pubDate>
+            <link>https://github.com/sabbivikas/guidy-releases</link>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>0.1.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/sabbivikas/guidy-releases/main/Guidy-0.1.3.md</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/sabbivikas/guidy-releases/releases/download/v0.1.3/Guidy-0.1.3.dmg" length="14613907" type="application/octet-stream" sparkle:edSignature="YBTb8mWONVz/NuKl0Gu+/Orm2hPupmlTYFkP8e+Que/S4HacNkAiWH8uRS97gJTCi1Bb1INU1T/jJi1dyL98Bw=="/>
+        </item>
+        <item>
             <title>0.1.2</title>
             <pubDate>Sun, 22 Nov 2026 14:34:47 -0600</pubDate>
             <link>https://github.com/sabbivikas/guidy-releases</link>
