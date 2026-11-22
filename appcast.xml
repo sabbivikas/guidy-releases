@@ -3,6 +3,19 @@
     <channel>
         <title>Guidy</title>
         <item>
+            <title>0.1.4</title>
+            <pubDate>Sun, 22 Nov 2026 17:19:17 -0600</pubDate>
+            <link>https://github.com/sabbivikas/guidy-releases</link>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>0.1.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/sabbivikas/guidy-releases/main/Guidy-0.1.4.md</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/sabbivikas/guidy-releases/releases/download/v0.1.4/Guidy-0.1.4.dmg" length="14114337" type="application/octet-stream" sparkle:edSignature="FvcGnPQGBMP9MDsbwdlyCqBzEl4CKDDn+WJbsPsbt7Gw8ebufExvGhjFju+s6YJ0QUCil+185is7bVJULADvAw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://github.com/sabbivikas/guidy-releases/releases/download/v0.1.4/Guidy9-8.delta" sparkle:deltaFrom="8" length="821094" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="eI00iLnBgeeGJdSFSwFDhOb0Yft9r9Hp9TX4ewp1a09sC47A83POeDKvYgHJzN6N+qkD8V1lqny1HBWV0oVlBg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.3</title>
             <pubDate>Sun, 22 Nov 2026 15:37:25 -0600</pubDate>
             <link>https://github.com/sabbivikas/guidy-releases</link>
@@ -21,16 +34,6 @@
             <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://raw.githubusercontent.com/sabbivikas/guidy-releases/main/Guidy-0.1.2.md</sparkle:releaseNotesLink>
             <enclosure url="https://github.com/sabbivikas/guidy-releases/releases/download/v0.1.2/Guidy-0.1.2.dmg" length="14613832" type="application/octet-stream" sparkle:edSignature="y/UB1h9W4N175TkgBd2X/GTX8PX21ktp3iF/OoI0fn90pglCM2CP6LhsgKXirV2qP143dhBxdmRLyvDBwU8LBQ=="/>
-        </item>
-        <item>
-            <title>0.1.1</title>
-            <pubDate>Sat, 21 Nov 2026 12:00:03 -0600</pubDate>
-            <link>https://github.com/sabbivikas/guidy-releases</link>
-            <sparkle:version>5</sparkle:version>
-            <sparkle:shortVersionString>0.1.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.2</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/sabbivikas/guidy-releases/main/Guidy-0.1.1.md</sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/sabbivikas/guidy-releases/releases/download/v0.1.1/Guidy-0.1.1.dmg" length="14070861" type="application/octet-stream" sparkle:edSignature="do2cGnX+Vm6oiMRS57mP9xZoS+2ewoCRkZ1du/4yCnjvUYLcCjMu5my1ICCf/ykLrYvCKxgAHAD/OVHzI/mqAQ=="/>
         </item>
     </channel>
 </rss>
