@@ -1,0 +1,54 @@
+# Copy of the workflow that lives in the public sabbivikas/guidy-releases
+# repository (with scripts/verify-release-dmg.sh beside it). It checks every
+# published release: both DMGs must hold Guidy at the tag's version, with the
+# drag-to-Applications layout and the notch panel. A release that fails is
+# turned into a pre-release, so releases/latest/download/Guidy.dmg (the
+# homepage's link) falls back to the last good one, and the run fails.
+name: verify-release
+
+on:
+  release:
+    types: [published, edited]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to check, e.g. v0.1.4"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check both DMGs against the tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          set -euo pipefail
+          case "${TAG}" in v1.1) echo "v1.1 is the internal tag of 0.1.0; skipped"; exit 0;; esac
+          VERSION="${TAG#v}"
+          mkdir -p dmgs
+          gh release download "${TAG}" --repo "${GITHUB_REPOSITORY}" --pattern "*.dmg" --dir dmgs
+          FAILED=0
+          for DMG in "dmgs/Guidy-${VERSION}.dmg" "dmgs/Guidy.dmg"; do
+            if [ ! -f "${DMG}" ]; then
+              echo "❌ ${TAG}: ${DMG##*/} is missing (each release uploads the versioned and the fixed name)"
+              FAILED=1
+              continue
+            fi
+            bash scripts/verify-release-dmg.sh "${DMG}" "${TAG}" || FAILED=1
+          done
+          if [ -f "dmgs/Guidy-${VERSION}.dmg" ] && [ -f dmgs/Guidy.dmg ] && \
+             [ "$(shasum -a 256 < "dmgs/Guidy-${VERSION}.dmg")" != "$(shasum -a 256 < dmgs/Guidy.dmg)" ]; then
+            echo "❌ ${TAG}: Guidy.dmg and Guidy-${VERSION}.dmg are different files"
+            FAILED=1
+          fi
+          if [ "${FAILED}" -ne 0 ]; then
+            gh release edit "${TAG}" --repo "${GITHUB_REPOSITORY}" --prerelease --latest=false
+            echo "Release ${TAG} was marked as a pre-release so the homepage's download keeps the last good build."
+            exit 1
+          fi
